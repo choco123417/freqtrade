@@ -31,7 +31,7 @@ jobs:
       - name: Build & install TA‑Lib from source
         run: |
           wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-          tar xzf ta-lib-0.5.5-src.tar.gz
+          tar xzf ta-lib-0.4.0-src.tar.gz
           cd ta-lib
           ./configure --prefix=/usr/local
           make
@@ -44,7 +44,7 @@ jobs:
 
       - name: Install Python dependencies and Freqtrade
         run: |
-          pip install ta-lib==0.5.5
+          pip install ta-lib==0.4.0
           pip install -r requirements.txt
           pip install -e .
 
