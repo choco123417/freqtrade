@@ -7,17 +7,17 @@ on:
 
 jobs:
   build:
-    name: Build Wheel (Windows, Python 3.8)
-    runs-on: windows-latest
+    name: Build Wheel (Windows, Python 3.11)
+    runs-on: linux-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Python 3.8
+      - name: Setup Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: 3.11
 
       - name: Install build tools
         run: |
